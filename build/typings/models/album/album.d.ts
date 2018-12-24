@@ -1,0 +1,30 @@
+import ArtistSimplified from '../artist/artist-simplified';
+import Image from '../common/image';
+import Page from '../paging/page';
+import TrackSimplified from '../track/track-simplified';
+declare class Album {
+    albumType: 'album' | 'single' | 'compilation';
+    artists: ArtistSimplified[];
+    availableMarkets: string[];
+    copyrights: any[];
+    externalIds: any;
+    externalUrls: any;
+    genres: string[];
+    href: string;
+    id: string;
+    images: Image[];
+    label: string;
+    name: string;
+    popularity: number;
+    releaseDate: string;
+    releaseDatePrecision: 'year' | 'month' | 'day';
+    totalTracks: number;
+    tracks: Page<TrackSimplified>;
+    type: 'album';
+    uri: string;
+    constructor(json: any);
+    readonly stringArtists: string;
+    readonly releaseYear: number;
+    readonly imageUrl: string;
+}
+export default Album;

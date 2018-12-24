@@ -1,0 +1,30 @@
+import AlbumSimplified from '../album/album-simplified';
+import ArtistSimplified from '../artist/artist-simplified';
+declare class Track {
+    album: AlbumSimplified;
+    artists: ArtistSimplified[];
+    availableMarkets: string[];
+    discNumber: number;
+    durationMs: number;
+    explicit: boolean;
+    externalIds: any;
+    externalUrls: any;
+    href: string;
+    id: string;
+    isPlayable: boolean;
+    linkedFrom: any;
+    restrictions: any;
+    name: string;
+    popularity: number;
+    previewUrl: string;
+    trackNumber: number;
+    type: 'track';
+    uri: string;
+    isLocal: boolean;
+    constructor(json: any);
+    readonly albumName: string;
+    readonly stringArtists: string;
+    readonly releaseYear: string;
+    readonly formattedDuration: string;
+}
+export default Track;
